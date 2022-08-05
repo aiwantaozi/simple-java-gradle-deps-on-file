@@ -20,7 +20,7 @@ repositories {
 dependencies {
     // Local file Option 1: can't show in dependency tree
     // begin
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    // implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
     // end
     
     implementation 'com.google.guava:guava:30.1.1-jre'
@@ -43,14 +43,14 @@ application {
 
 // Local file Option 2: will show 
 // ----- begin
-// repositories {
-//    flatDir {
-//        dirs 'libs'
-//    }
-// }
+repositories {
+   flatDir {
+       dirs 'libs'
+   }
+}
 
 
-// dependencies {
-//    implementation name: 'joda-time-2.10.14'
-// }
+dependencies {
+   implementation name: 'joda-time-2.10.14'
+}
 // ----- end
